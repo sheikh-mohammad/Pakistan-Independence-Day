@@ -93,50 +93,6 @@
                 transform: translateY(0);
             }
         }
-      
-        .flag-container {
-            width: 300px;
-            height: 200px;
-            margin: 2rem auto;
-            border: 3px solid white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            animation: wave 3s ease-in-out infinite;
-        }
-
-        .pakistan-flag {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            position: relative;
-        }
-
-        .flag-green {
-            width: 75%;
-            background: var(--pakistan-green);
-            position: relative;
-        }
-
-        .flag-white {
-            width: 25%;
-            background: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .crescent-star {
-            font-size: 3rem;
-            color: var(--pakistan-green);
-            transform: rotate(-15deg);
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes wave {
-            0%, 100% { transform: translateY(0px) rotateY(0deg); }
-            50% { transform: translateY(-5px) rotateY(2deg); }
-        }
 
         @keyframes glow {
             from { text-shadow: 0 0 5px rgba(1, 65, 28, 0.5); }
