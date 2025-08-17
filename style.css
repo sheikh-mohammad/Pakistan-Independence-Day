@@ -1,0 +1,477 @@
+:root {
+            --pakistan-green: #01411C;
+            --pakistan-white: #ffffff;
+            --light-green: #0d5d2e;
+            --dark-green: #012d15;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--pakistan-green) 0%, var(--pakistan-white) 50%, var(--pakistan-green) 100%);
+            background-attachment: fixed;
+        }
+      
+        .navbar-custom {
+            background: rgba(1, 65, 28, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(1, 65, 28, 0.3);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: white !important;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: white !important;
+            transform: translateY(-2px);
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(1, 65, 28, 0.8), rgba(1, 65, 28, 0.8)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300"><defs><pattern id="stars" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="2" fill="white" opacity="0.3"/></pattern></defs><rect width="1000" height="300" fill="url(%23stars)"/></svg>');
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .hero-date {
+            font-size: 6rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, white, #90EE90, white);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: none;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+      
+        .flag-container {
+            width: 300px;
+            height: 200px;
+            margin: 2rem auto;
+            border: 3px solid white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            animation: wave 3s ease-in-out infinite;
+        }
+
+        .pakistan-flag {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: relative;
+        }
+
+        .flag-green {
+            width: 75%;
+            background: var(--pakistan-green);
+            position: relative;
+        }
+
+        .flag-white {
+            width: 25%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .crescent-star {
+            font-size: 3rem;
+            color: var(--pakistan-green);
+            transform: rotate(-15deg);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: translateY(0px) rotateY(0deg); }
+            50% { transform: translateY(-5px) rotateY(2deg); }
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 5px rgba(1, 65, 28, 0.5); }
+            to { text-shadow: 0 0 15px rgba(1, 65, 28, 0.8); }
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            color: var(--pakistan-green);
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--pakistan-green), var(--light-green));
+            border-radius: 2px;
+        }
+
+        .custom-card {
+            background: white;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(1, 65, 28, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .custom-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(1, 65, 28, 0.2);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            color: var(--pakistan-green);
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            color: var(--pakistan-green);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--pakistan-green);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 2rem 0;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(1, 65, 28, 0.1);
+            position: relative;
+        }
+
+        .timeline-date {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--pakistan-green);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            z-index: 2;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: 50%;
+            margin-left: 2rem;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 50%;
+            margin-right: 2rem;
+        }
+      
+        .quote-section {
+            background: rgba(1, 65, 28, 0.05);
+            border-left: 5px solid var(--pakistan-green);
+            border-radius: 10px;
+            padding: 3rem;
+            margin: 3rem 0;
+        }
+
+        .quote-text {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--pakistan-green);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .quote-author {
+            font-weight: bold;
+            color: var(--dark-green);
+            text-align: right;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--pakistan-green), var(--light-green));
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .gallery-item {
+            background: var(--pakistan-green);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 35px rgba(1, 65, 28, 0.3);
+        }
+
+        .gallery-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-custom {
+            background: var(--pakistan-green);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-section h5 {
+            color: white;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: white;
+        }
+
+        .social-icon {
+            font-size: 1.5rem;
+            color: white;
+            margin: 0 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px);
+            color: #90EE90;
+        }
+
+        .fade-in {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .fade-in-delay {
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .hero-date {
+                font-size: 5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-date {
+                font-size: 4rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .flag-container {
+                width: 250px;
+                height: 167px;
+            }
+            
+            .timeline::before {
+                left: 2rem;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 4rem;
+                margin-right: 1rem;
+            }
+            
+            .timeline-date {
+                left: 2rem;
+            }
+            
+            .section-padding {
+                padding: 60px 0;
+            }
+            
+            .quote-text {
+                font-size: 1.2rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-date {
+                font-size: 3rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .flag-container {
+                width: 200px;
+                height: 133px;
+            }
+            
+            .crescent-star {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .section-padding {
+                padding: 40px 0;
+            }
+            
+            .card-icon {
+                font-size: 2.5rem;
+            }
+            
+            .gallery-icon {
+                font-size: 3rem;
+            }
+            
+            .quote-section {
+                padding: 2rem;
+            }
+            
+            .quote-text {
+                font-size: 1.1rem;
+            }
+        }
+
+        .celebration-bg {
+            background: linear-gradient(45deg, var(--pakistan-green), var(--light-green), var(--pakistan-green));
+            color: white;
+        }
+
+        .firework {
+            font-size: 2rem;
+            animation: firework 2s ease-in-out infinite;
+        }
+
+        @keyframes firework {
+            0%, 100% { 
+                opacity: 1; 
+                transform: scale(1) rotate(0deg); 
+            }
+            50% { 
+                opacity: 0.7; 
+                transform: scale(1.2) rotate(180deg); 
+            }
+        }
